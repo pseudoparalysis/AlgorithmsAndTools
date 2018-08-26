@@ -1,0 +1,83 @@
+CONTENT
+1) RUNTIME OF ALGORITHM
+2) USE OF ASYMPTOTIC NOTATION
+
+
+1)****************************RUNTIME OF ALGORITHM*******************************
+-There are 2 factors affecting the total runtime of an algorithm.
+The size of array, and the computational power of the computer involved.
+
+-Since computational power varies throughout computer and programming language, we can consider it as a constant for simplicity sake. What is left that affect the runtime of the algorithm is the SIZE OF INPUT involved in the algorithm.
+
+
+2)*****************************USE OF SYMPTOTIC NOTATION****************************
+-The symptotic notation is used to represent the worst and best runtime of the a algorithm.
+**Lower is better, since it means faster.
+-There are 3 forms of notation, Theta, O and Omega.
+
+BIG O NOTATION - The worst possible number of runtime of the algorithm (UPPER ASYMPTOTE)
+BIG Omega NOTATION - The best possible number of runtime of the algorithm(lOWER ASYMPTOTE)
+THETA NOTATION - Represents the upper and lower asymptote. (Big O with Big Omega )gives you Theta)
+
+**These applies for LARGE n!!!!
+
+2.1)************************BIG THETA NOTATION***************************
+For a given algorithm, lets say the total number of steps for the algorithm to complete is a function of n, the size of the data, f(n) = n^2 + 600n+ 100.
+Let c1 be the total computation time for executing the algorithm
+Let c2 be the total computation time for other small stuff that is not related to the algorithm(e.g. Storing data of a newly declared variable takes time as well.)
+
+So total time used is c1*f(n) + c2.
+
+When n becomes large enough, the significant term will be n^2.
+
+There is a worst case and the best cast scenario for the algorithm.
+So, for k1 and k2 being real numbers, when we say THETA(n^2),
+We are saying that the runtime cannot be more than k1*n^2 and cannot be less than k2*n^2.
+
+**k1 and k2 are any real numbers such that the time take for the algorithm to run is inbetween k1*n^2 and k2*n^2.
+
+**THETA as in the capital version of the greek alphabet, not literally "THETA"
+
+2.2)*********************************BIG O NOTATION***************************
+-Same concept as explained in section 2.1
+-But big O notation represents the worst possible runtime, hence the runtime of the algorithm cannot extend the big O notation.
+-This is the upper boundary
+
+Instead of THETA(n^2), it is written as O(n^2)
+
+2.3)****************************BIG OMEGA NOTATION*****************************
+-Samething, but it is the lower boundary of the runtime of the algorithm.
+
+written as OMEGA(n^2).
+
+**OMEGA as is the capital version of the greek alphabet, not literally "OMEGA"
+
+
+2.2)****************************POLYNOMIAL FUNCTIONS*********************************
+-For polynomial functions e.g. (n^3 + 233n + 100), the term with the highest power will be considered in the notations.
+
+Taking 6n^3 + 45n^2 + 100n + 300  as example, as n reach a very very large number, which is the case normally, 6n^3 will the term that is significant. 
+Even if the Equation is 6n^3 + 6000n^2 + 50345n + 9010000, 
+At some value of n, the 6n^3 will have a value alot bigger than the rest of the terms combined.
+
+The coefficient of n^3 is not important as well as it is just a multiplier.
+Therefore, the term we will be focusing on is n^3.
+
+To represent the worst case scenario of 6n^3 + 45n^2 + 100n + 300, O(n^3) is used.
+To represent the best case scenario of " , Omega(n^3) is used.
+To represent both, Theta (n^3) is used.
+
+
+
+2.3)***************************LOGARITHM FUNCTIONS**********************************
+-For loga(n) and logb(n), the growth rate is approximately the same in the long run
+
+loga(n) = logb(n)/logb(a)
+
+loga(n) will just be logb(n) miltiplied by a constant factor 1/logb(a). Hence, for large value of n, loga(n) and logb(n) approximately have the same growth rate.
+
+
+2.4)**************************OTHER FUNCTIONS******************************
+-To know what terms of n to include in the notation, just take the MOST SIGNIFICANT TERM, and ANY n that is multiplied or divided with the most signifcant term.
+
+e.g. n^2 *lg(n). n^2 grows much faster than lg(n) but both are included because lg(n) is multiplied by lg(n). 

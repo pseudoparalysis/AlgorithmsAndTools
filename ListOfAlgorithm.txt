@@ -1,0 +1,36 @@
+CONTENT
+1)SHORTEST PATH BY NUMBERING STEPS
+2)BINARY SEARCH
+
+
+
+
+1)******************SHORTEST PATH BY NUMBERING STEPS*********************
+-Basic algorithm to find the shortest route to the destination.
+-Each step will be considered a box.
+
+step 1) Number the destination 0
+step 2) Number the next box(es) nearest to the destination as 1
+step 3) Number the next box(es) nearest to the box(es) numbered as 1 as 2
+step 4) So the principle is, for box number "n", the next box nearest to it, but further away from the destination is numbered "n+1"
+step 5) Eventually, the box where the starting point is will be numbered as well.
+step 6) To get to the destination from the starting point numbered "x", simply go to the nearest box numbered "x-1". Repeat the process
+step 7) Eventually, the destination will be reached.
+
+**The number indicates the number of steps to the destination, from a that numbered box. e.g box 4 means from box 4, you need 4 steps to reach the destination.
+**The number need not be 0,1,2,3,... Can be of any pattern/sequences as long as it provide a way for the program to decipher the way towards the destination.
+
+Q: If you are on box "6", and there are 2 boxes beside your box, how do you number them?
+A: Simply number the 2 boxes "7", since they are both 1 step away from box "6".
+
+Q: If there are 2 paths leading to the same box, 1 path comes in with a box number 12, other box comes in with a box number 7, how do you number the box that is sandwiched?
+A: Follow the numbering that result in a lower number as the number indicates your steps. Lower number of steps is favoured as you want to go by the shortest route. So in this case, the sandwiched box will be numbered 8.
+
+Q: When you are routing to the destination by following the number sequence, what happens when there are 2 boxes of the same number on the next step?
+A: It depends on how your program check for the numbers. If one box is north while other box is south of current position, and if your checking algorithm is top-right-bottom-left, then your program will recognise the box at the north first and advance before it recognise the box on the south.
+
+2)*************BINARY SEARCH**********************
+-Given a ordered list, and a number to check if it exist in the list, and if so, what is the position, binary search can do it quickly.
+-The principle is to set an upper limit which is the last index of the list, and a lower limit, which is the first index of the list, then continuously guess the mid point of the remaining choices.
+
+See binarySearch folder for the codes. The code is self explanatory.
